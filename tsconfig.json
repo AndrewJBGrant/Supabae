@@ -23,6 +23,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/andrew/counter.jsx", "app/andrew/ChildChange.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/andrew/counter.jsx", "app/andrew/ChildChange.tsx"],
   "exclude": ["node_modules"]
 }
