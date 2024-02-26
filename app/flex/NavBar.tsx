@@ -1,16 +1,20 @@
 "use client";
 import { useState } from "react";
-import MainContent from "./MainContent";
-import NavBar from "./NavBar";
 
-function Sidebar() {
+
+export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
+
+ console.log(typeof(isOpen),"What isOpen?")
+  console.log(typeof(setIsOpen),"What isSetIsOpen?")
+
+
 
   return (
     <>
       {!isOpen ? (
 
-        <div className="fixed top-1/2 z-40">
+        <div className="fixed top-1/2 z-40 float-right">
           <button>
             <span className="absolute bg-green-400" onClick={() => setIsOpen(!isOpen)}>Open</span>
           </button>
@@ -31,6 +35,7 @@ function Sidebar() {
 
 
 
+
       </div>
  <div className="fixed top-1/2 z-40">
           <button>
@@ -40,15 +45,5 @@ function Sidebar() {
       </>
       )}
     </>
-  );
-}
-
-export default function FlexPage() {
-  return (
-    <div className="flex relative z-0 h-screen w-full overflow-hidden">
-        <NavBar />
-        <MainContent />
-
-    </div>
   );
 }
