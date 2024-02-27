@@ -2,7 +2,7 @@ import { GeistSans } from "geist/font/sans";
 import "./globals.css";
 
 import ColorNav from "./ColorNav";
-import ChildChange, { Context } from "./andrew/ChildChange";
+import ChildChange from "./andrew/ChildChange";
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`

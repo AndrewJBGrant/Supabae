@@ -3,7 +3,7 @@
 import ColorNav from "../ColorNav";
 import { ColorContext } from "../colorContext";
 import { MyComponent } from "./MyComponent";
-import { useState, useEffect } from "react";
+import { useState, useLayoutEffect } from "react";
 
 // export type ThemeContextType = "bg-teal-500" | "bg-purple-600" | "bg-yellow-600";
 
@@ -28,7 +28,8 @@ const getInitialState = () => {
 const ChildChange = () => {
   const [color, setColor] = useState(getInitialState);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
+    console.log(color, "Here in the useLayout!!")
     localStorage.setItem("color", JSON.stringify(color));
   }, [color]);
 
